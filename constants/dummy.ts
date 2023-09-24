@@ -18,7 +18,7 @@ const DataDummy = [
     price: 4.25,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus in ipsum ac dictum. Integer et nunc ut tellus tinci...More",
-    image: assets.nft01,
+    image: assets.Media,
     menu: true,
   },
   

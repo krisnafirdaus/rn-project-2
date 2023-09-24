@@ -4,8 +4,9 @@ import { Divider } from 'react-native-paper';
 import PostAction from './PostAction';
 import NewFeed from './NewFeed';
 import ContentFeed from './ContentFeed';
+import {TData} from './type';
 
-const CardFeed = ({data}) => {
+const CardFeed: React.FC<{data: TData}> = ({data}) => {
     return (
         <View>
             <View 

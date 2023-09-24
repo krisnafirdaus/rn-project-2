@@ -1,8 +1,9 @@
 import { View, Image, Text } from 'react-native';
 import { FONTS, COLORS, assets , SIZES} from "../constants";
+import {TData} from './type';
 import ThreeDotsMenu from './ThreeDotsMenu';
 
-const NewFeed = ({data}) => {
+const NewFeed: React.FC<{data: TData}> = ({data}) => {
     return (
         <View style={{  
             flexDirection: 'row',
