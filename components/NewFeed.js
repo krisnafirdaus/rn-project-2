@@ -1,13 +1,22 @@
 import { View, Image, Text } from 'react-native';
 import { FONTS, COLORS, assets , SIZES} from "../constants";
+import ThreeDotsMenu from './ThreeDotsMenu';
 
-const NewFeed = () => {
+const NewFeed = ({data}) => {
     return (
         <View style={{  
             flexDirection: 'row',
             alignItems: 'center',
+            justifyContent: 'space-between',
             marginBottom: 8,
         }}>
+            <View 
+                 style={{  
+                    flexDirection: 'row',
+                    alignItems: 'center',
+                    marginBottom: 8,
+                }}
+            >
             <View
                 style={{
                     marginRight: 13,
@@ -22,7 +31,7 @@ const NewFeed = () => {
                         fontSize: SIZES.font,
                     }}
                 >
-                    UsupSuparma
+                    {data.name}
                 </Text>
                 <Text
                     style={{
@@ -35,6 +44,14 @@ const NewFeed = () => {
                     Mar 24, 2022
                 </Text>
             </View>
+            </View>
+            {data.menu && <View  style={{  
+            flexDirection: 'row',
+            alignItems: 'center',
+            marginRight: 20,
+            }}>
+                <ThreeDotsMenu />
+            </View>}
         </View>
     )
 }

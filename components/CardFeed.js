@@ -14,7 +14,7 @@ const CardFeed = ({data}) => {
                     paddingVertical: 8,
                 }}
             >
-                <NewFeed />
+                <NewFeed data={data} />
                 <Divider style={{marginHorizontal: -20}} />
                 <ContentFeed />
             </View>
