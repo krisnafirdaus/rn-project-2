@@ -1,10 +1,9 @@
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer, DefaultTheme } from "@react-navigation/native";
+import BottomTabs from "./components/BottomBar";
+import FloatingButton from "./components/FloatingButton";
 
 import { useFonts } from "expo-font";
-
-import Details from "./screens/Details";
-import Home from "./screens/Home";
 
 const Stack = createStackNavigator();
 
@@ -29,13 +28,8 @@ const App = () => {
 
   return (
     <NavigationContainer theme={theme}>
-      <Stack.Navigator
-        screenOptions={{ headerShown: false }}
-        initialRouteName="Home"
-      >
-        <Stack.Screen name="Home" component={Home} />
-        <Stack.Screen name="Details" component={Details} />
-      </Stack.Navigator>
+      <FloatingButton />
+      <BottomTabs /> 
     </NavigationContainer>
   );
 };
